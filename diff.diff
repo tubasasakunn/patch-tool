@@ -1,0 +1,13 @@
+2,4c2,4
+< var __createBinding =
+<   (this && this.__createBinding) ||
+<   (Object.create
+---
+> //changed
+> var __createBinding = hoge(
+>   Object.create
+24c24,25
+<       });
+---
+>       }
+> );

@@ -1,0 +1,58 @@
+{
+  "name": "diff-patcher",
+  "publisher": "YourPublisherName",
+  "displayName": "Diff Patcher",
+  "description": "Apply patches to files",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.91.1"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onView:diffPatcher.patcherView"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "diff-patcher-sidebar",
+          "title": "Diff Patcher",
+          "icon": "media/diff-patcher-icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "diff-patcher-sidebar": [
+        {
+          "type": "webview",
+          "id": "diffPatcher.patcherView",
+          "name": "Patcher"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "diffpatcher.applyPatch",
+        "title": "Apply Patch"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.91.1",
+    "@types/node": "^14.14.37",
+    "@typescript-eslint/eslint-plugin": "^4.19.0",
+    "@typescript-eslint/parser": "^4.19.0",
+    "eslint": "^7.22.0",
+    "typescript": "^4.2.3"
+  }
+}

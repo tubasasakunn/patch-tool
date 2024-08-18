@@ -1,0 +1,44 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    padding: 10px;
+    color: var(--vscode-foreground);
+    background-color: var(--vscode-editor-background);
+}
+
+#patch-input {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+    padding: 5px;
+    resize: vertical;
+    background-color: var(--vscode-input-background);
+    color: var(--vscode-input-foreground);
+    border: 1px solid var(--vscode-input-border);
+}
+
+#apply-patch {
+    background-color: var(--vscode-button-background);
+    color: var(--vscode-button-foreground);
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#apply-patch:hover {
+    background-color: var(--vscode-button-hoverBackground);
+}
+
+#apply-patch:active {
+    background-color: var(--vscode-button-activeBackground);
+}
+
+.error {
+    color: var(--vscode-errorForeground);
+    margin-top: 10px;
+}
+
+.success {
+    color: var(--vscode-notificationsInfoIcon);
+    margin-top: 10px;
+}
